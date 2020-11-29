@@ -19,7 +19,7 @@ For systemd-boot system:
 sudo nano /boot/efi/loader/entries/loader.conf (there might be some different name of loader.conf, e.g, PopOS has Pop_OS-current.conf)
 
 Add the following modules at the end of "options" line:
-intel_iommu=on kvm.ignore_msrs=1 vfio-pci.ids=XXXX:XXXX,XXXX:XXXX"
+intel_iommu=on kvm.ignore_msrs=1 vfio-pci.ids=XXXX:XXXX,XXXX:XXXX
 ~~~
 
 XXXX:XXXX are GPU ids that we acquired in step 1. Make sure not to leave any space in-between the comma.
