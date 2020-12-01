@@ -14,7 +14,7 @@ sudo systemctl start libvirtd.service
 ~~~
 
 3. For the first time, run virt-manager as root. Check if KVM/QEMU is connected.
-If it shows only LXC as connection, go to File >Add Connection and choose QEMU/KVM as hypervisor and click add connection.
+If it shows only LXC as connection, go to File > Add Connection and choose QEMU/KVM as hypervisor and click add connection.
 
 4. Import your previous existing machines or create new machines as required.
 
