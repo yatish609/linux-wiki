@@ -26,7 +26,6 @@ sudo usermod -a -G libvirt $(whoami)
 ~~~
 (Members of the libvirt group have the ability to manage virtual machines)
 
-5. 
 
 ### For Debian or debian-based distributions:
 
