@@ -9,7 +9,7 @@
 3. Load kernel modules "qxl" and "bochs_drm" in order to gain a decent performance. This can be done by add the above modules in grub file which can be found at /etc/default/grub on grub booted systems.
 
 
-Sources and useful links:
+Sources and useful links:  
 https://wiki.archlinux.org/index.php/QEMU#qxl  
 https://www.spice-space.org/download.html  
 https://askubuntu.com/questions/858649/how-can-i-copypaste-from-the-host-to-a-kvm-guest  
