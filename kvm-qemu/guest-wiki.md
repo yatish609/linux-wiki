@@ -10,6 +10,6 @@
 
 
 Sources and useful links:
-https://wiki.archlinux.org/index.php/QEMU#qxl
-https://www.spice-space.org/download.html
-https://askubuntu.com/questions/858649/how-can-i-copypaste-from-the-host-to-a-kvm-guest
+https://wiki.archlinux.org/index.php/QEMU#qxl  
+https://www.spice-space.org/download.html  
+https://askubuntu.com/questions/858649/how-can-i-copypaste-from-the-host-to-a-kvm-guest  
