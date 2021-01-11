@@ -1,12 +1,12 @@
 # LINUX WIKI
 
 ## Index
-1. [KVM]
-2. [Sound Improvements]
-3. [VAAPI]
-4. [Proprietary Bluetooth Codecs [AptX/AptX HD/LDAC]]
-5. [ZSH]
-6. [Bluetooth Pairing for Dual Boot]
+1. [KVM](#kvm)
+2. [Sound Improvements](#sound-improvements)
+3. [VAAPI](#vaapi)
+4. [Proprietary Bluetooth Codecs](#proprietary-bluetooth-codecs)
+5. [ZSH](#zsh)
+6. [Bluetooth Pairing for Dual Boot](#bluetooth-pairing-for-dual-boot)
 
 ## KVM
 
