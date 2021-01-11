@@ -37,11 +37,11 @@ If it shows only LXC as connection, go to File > Add Connection and choose QEMU/
 5. After reboot, if virt manager shows error "network 'default' is not active", click on any VM, then go to Edit > Connection Details > Virtual Networks and enable Autostart on boot option. Then reboot and it should work fine.
 
 6. If virt-manager asks you to enter root password everytime, add yourself to the libvirt group:
-    ```sh
+    ```
     sudo usermod -a -G libvirt $(whoami)
     ```
 
-(Members of the libvirt group have the ability to manage virtual machines)
+    (Members of the libvirt group have the ability to manage virtual machines)
 
 Useful links:  
 https://wiki.manjaro.org/index.php/Virt-manager  
