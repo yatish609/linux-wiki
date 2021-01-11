@@ -244,7 +244,7 @@ Using the instructions below, we'll first pair your Bluetooth devices with Ubunt
 
 |    Browser    | VAAPI Support |
 | ------------- | ------------- |
-| Google Chrome | :negative_squared_cross_mark:  |
+| Google Chrome | :x:  |
 | Chromium  | :heavy_check_mark:  |
 
 
