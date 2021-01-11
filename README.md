@@ -11,6 +11,8 @@
     * [Proprietary Bluetooth Codecs](#proprietary-bluetooth-codecs)
 3. [Bluetooth Pairing for Dual Boot](#bluetooth-pairing-for-dual-boot)
 4. [VAAPI](#vaapi)
+    * [Chromium-based browsers](#chromium-based-browsers)
+    * [Firefox](#firefox)
 5. [ZSH](#zsh)
     * [Oh-my-zsh](#oh-my-zsh)
 
@@ -254,7 +256,7 @@ The following table shows VAAPI support for various browsers:
 | Firefox | :heavy_check_mark: |
 
 
-To use VAAPI in Chromium-based browsers:
+### Chromium-based browsers:
    1. Install required packages:
         * Arch
             ```
@@ -270,7 +272,7 @@ To use VAAPI in Chromium-based browsers:
 
    5. To verify if VAAPI is successfully running, install `intel-gpu-tools` and run `sudo intel_gpu_top` and check if video decode is being used. (Note: Video decode can also be used for DE such as Cinnamon or KDE, so make sure to check this while running video in foreground with tab in focus.)
 
-To use VAAPI in Firefox:
+### Firefox:
    1. Go to `about:config` and make sure the following flags are set to respective boolean values:
 
        |    Flags    | Boolean Value |
