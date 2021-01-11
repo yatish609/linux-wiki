@@ -104,9 +104,9 @@ https://github.com/kubernetes/minikube/issues/828 (1st reply)
 ##### For Debian or debian-based distributions:
 
 1. Install virt-manager using:
-~~~
-sudo apt install virt-manager bridge-utils
-~~~
+    '''
+    sudo apt install virt-manager bridge-utils
+    '''
 
 
 ## Sound Improvements
