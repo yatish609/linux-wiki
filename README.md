@@ -16,9 +16,7 @@
 
 ### Host Config
 
-#### Installation:
-
-##### For Arch or Arch-based distributions:
+#### For Arch or Arch-based distributions:
 1. Install the following packages:
     ```
     sudo pacman -S virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat libguestfs
@@ -49,7 +47,7 @@ https://www.reddit.com/r/Fedora/comments/c0frj7/why_does_virtmanager_require_sud
 https://github.com/kubernetes/minikube/issues/828 (1st reply)  
 
 
-##### For Debian or debian-based distributions:
+#### For Debian or debian-based distributions:
 
 1. Install virt-manager using:
     ```
@@ -147,15 +145,13 @@ Adds AptX, AptX HD, LDAC and AAC support in Linux. Greatly improves sound qualit
 
 GitHub Repo Link - https://github.com/EHfive/pulseaudio-modules-bt
 
-### Installation Instructions
-
-#### Arch
+### Arch
 
     ~~~
     yay -S --noconfirm pulseaudio-modules-bt
     ~~~
 
-#### Debian
+### Debian
 
     ~~~
     sudo add-apt-repository ppa:berglh/pulseaudio-a2dp
