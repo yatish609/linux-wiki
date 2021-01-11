@@ -162,9 +162,7 @@ GitHub Repo Link - https://github.com/EHfive/pulseaudio-modules-bt
 
 Basically, when you pair your device, your Bluetooth service generates a unique set of pairing keys. First, your computer stores the Bluetooth device's MAC address and pairing key. Second, your Bluetooth device stores your computer's MAC address and the matching key. This usually works fine, but the MAC address for your Bluetooth port will be the same on both Linux and Windows (it is set on the hardware level). Thus, when you re-pair the device in Windows or Linux and it generates a new key, that key overwrites the previously stored key on the Bluetooth device. Windows overwrites the Linux key and vice versa.
 
-Bluetooth LE Devices: These may pair differently. I haven't investigated myself, but this may help Dual Boot Bluetooth LE (low energy) device pairing
-
-## How to fix
+### How to fix
 Using the instructions below, we'll first pair your Bluetooth devices with Ubuntu/Linux Mint, and then we'll pair Windows. Then we'll go back into our Linux system and copy the Windows-generated pairing key(s) into our Linux system.
 
 1. Pair all devices w/ Mint/Ubuntu
