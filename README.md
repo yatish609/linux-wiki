@@ -73,11 +73,11 @@ https://askubuntu.com/questions/858649/how-can-i-copypaste-from-the-host-to-a-kv
 
 ##### For Arch or Arch-based distributions:
 1. Install the following packages:
-~~~
+~~~sh
 sudo pacman -S virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat libguestfs
 ~~~
 2. Enable libvirtd service:
-~~~
+~~~sh
 sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service
 ~~~
@@ -90,7 +90,7 @@ If it shows only LXC as connection, go to File > Add Connection and choose QEMU/
 5. After reboot, if virt manager shows error "network 'default' is not active", click on any VM, then go to Edit > Connection Details > Virtual Networks and enable Autostart on boot option. Then reboot and it should work fine.
 
 6. If virt-manager asks you to enter root password everytime, add yourself to the libvirt group:
-~~~
+~~~sh
 sudo usermod -a -G libvirt $(whoami)
 ~~~
 (Members of the libvirt group have the ability to manage virtual machines)
@@ -157,3 +157,83 @@ GitHub Repo Link - https://github.com/EHfive/pulseaudio-modules-bt
 ### Installation
 
 
+
+## Bluetooth Pairing for Dual Boot
+
+Basically, when you pair your device, your Bluetooth service generates a unique set of pairing keys. First, your computer stores the Bluetooth device's MAC address and pairing key. Second, your Bluetooth device stores your computer's MAC address and the matching key. This usually works fine, but the MAC address for your Bluetooth port will be the same on both Linux and Windows (it is set on the hardware level). Thus, when you re-pair the device in Windows or Linux and it generates a new key, that key overwrites the previously stored key on the Bluetooth device. Windows overwrites the Linux key and vice versa.
+
+Bluetooth LE Devices: These may pair differently. I haven't investigated myself, but this may help Dual Boot Bluetooth LE (low energy) device pairing
+
+## How to fix
+Using the instructions below, we'll first pair your Bluetooth devices with Ubuntu/Linux Mint, and then we'll pair Windows. Then we'll go back into our Linux system and copy the Windows-generated pairing key(s) into our Linux system.
+
+1. Pair all devices w/ Mint/Ubuntu
+2. Pair all devices w/ Windows
+3. Copy your Windows pairing keys in one of two ways:
+    * Use psexec -s -i regedit.exe from Windows (harder)
+
+        1. Go to "Device & Printers" in Control Panel and go to your Bluetooth device's properties. Then, in the Bluetooth section, you can find the unique identifier. Copy that (you will need it later).
+        2. Download PsExec from http://technet.microsoft.com/en-us/sysinternals/bb897553.aspx.
+        3. Unzip the zip you downloaded and open a cmd window with elevated privileges. (Click the Start menu, search for cmd, then right-click the CMD and click "Run as Administrator".)
+        4. cd into the folder where you unzipped your download.
+        5. Run psexec -s -i regedit.exe
+        6. Navigate to find the keys at HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\BTHPORT\Parameters\Keys.  If there is no CurrentControlSet, try ControlSet001.
+        7. You should see a few keys labels with the MAC addresses - write down the MAC address associated with the unique identifier you copied before.
+
+    * Use chntpw from your Linux distro (easier). Start in a terminal then:
+
+        1. sudo apt-get install chntpw
+
+        2. Mount your Windows system drive
+
+        3. cd /[WindowsSystemDrive]/Windows/System32/config
+
+        4. chntpw -e SYSTEM opens a console
+
+        5. Run these commands in that console:
+
+~~~
+
+> cd CurrentControlSet\Services\BTHPORT\Parameters\Keys
+> # if there is no CurrentControlSet, then try ControlSet001
+> # on Windows 7, "services" above is lowercased.
+> ls
+# shows you your Bluetooth port's MAC address
+Node has 1 subkeys and 0 values
+  key name
+  <aa1122334455>
+> cd aa1122334455  # cd into the folder
+> ls  
+# lists the existing devices' MAC addresses
+Node has 0 subkeys and 1 values
+  size     type            value name             [value if type DWORD]
+    16  REG_BINARY        <001f20eb4c9a>
+> hex 001f20eb4c9a
+=> :00000 XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ...ignore..chars..
+# ^ the XXs are the pairing key
+
+~~~
+
+        6. Make a note of which Bluetooth device MAC address matches which pairing key. The Mint/Ubuntu one won't need the spaces in-between.  Ignore the :00000.
+
+4. Go back to Linux (if not in Linux) and add our Windows key to our Linux config entries. Just note that the Bluetooth port's MAC address is formatted differently when moving from Windows to Linux - referenced as aa1122334455 in Windows in my example above. The Linux version will be in all caps and punctuated by ':' after every two characters - for example AA:11:22:33:44:55.  Based on your version of Linux, you can do one of these:
+
+    1. Switch to root: su -
+
+    2. cd to your Bluetooth config location /var/lib/bluetooth/[bth port  MAC addresses]
+
+    3. Here you'll find folders for each device you've paired with. The folder names being the Bluetooth devices' MAC addresses and contain a single file info. In these files, you'll see the link key you need to replace with your Windows ones, like so:
+
+~~~
+[LinkKey]
+Key=B99999999FFFFFFFFF999999999FFFFF
+~~~
+
+5. Once updated, restart your Bluetooth service in one of the following ways, and then it works!
+    * Either restart bluetooth
+~~~
+sudo systemctl restart Bluetooth 
+~~~
+    * Alternatively, reboot your machine into Linux.
+
+6. Reboot into Windows - it works!
