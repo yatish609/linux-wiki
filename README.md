@@ -37,8 +37,8 @@
 
      XXXX:XXXX are GPU ids that we acquired in step 1. Make sure not to leave any space in-between the comma.
 
-Source and useful links:
-https://www.youtube.com/watch?v=tDMoEvf8Q18&t=523s (Detailed video guide)
+    Source and useful links:
+    https://www.youtube.com/watch?v=tDMoEvf8Q18&t=523s (Detailed video guide)
 
 ### Guest Config
 Under CPUs, you should customize the topology, i.e. with my 8 Cores (4 real cores + 4 HT), you should set:
