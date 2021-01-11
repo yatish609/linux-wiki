@@ -26,6 +26,7 @@ For grub system:
     ```
 
 For systemd-boot system:
+
     ```
     sudo nano /boot/efi/loader/entries/loader.conf (there might be some different name of loader.conf, e.g, PopOS has Pop_OS-current.conf)
 
