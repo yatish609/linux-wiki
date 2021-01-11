@@ -261,7 +261,7 @@ To use VAAPI in Chromium-based browsers:
             sudo pacman -S intel-gpu-driver libva-intel-driver libva-utils
             ```
         * Ubuntu Based
-           Already pre-installed
+            Already pre-installed
 
    2. Visit `chrome://flags` and enable `#ignore-gpu-blocklist`, `#enable-accelerated-video-decode` and `#enable-gpu-rasterization`.
 
@@ -273,11 +273,11 @@ To use VAAPI in Chromium-based browsers:
 
 To use VAAPI in Firefox:
    1. Go to `about:config` and make sure the following flags are set to respective boolean values:
-                |    Flags    | Boolean Value |
-                | :-----------: | :-----------: |
-                | media.ffmpeg.dmabuf-textures.enabled | True |
-                | media.ffmpeg.vaapi.enabled | True |
-                | media.ffvpx.enabled | False |
+       |    Flags    | Boolean Value |
+       | :-----------: | :-----------: |
+       | media.ffmpeg.dmabuf-textures.enabled | True |
+       | media.ffmpeg.vaapi.enabled | True |
+       | media.ffvpx.enabled | False |
    2. Run Firefox with `MOZ_X11_EGL=1` like `MOZ_X11_EGL=1 firefox` or `MOZ_X11_EGL=1 /usr/lib/firefox/firefox`
 
  
