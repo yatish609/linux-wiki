@@ -138,17 +138,22 @@ GitHub Repo Link - https://github.com/EHfive/pulseaudio-modules-bt
 
 ### Installation Instructions
 
-#### Arch
+    #### Arch
 
 ~~~
 yay -S --noconfirm pulseaudio-modules-bt
 ~~~
 
-#### Debian
+    #### Debian
 
 ~~~
 sudo add-apt-repository ppa:berglh/pulseaudio-a2dp
 sudo apt update
 sudo apt install pulseaudio-modules-bt libldac
 ~~~
+
+## ZSH
+
+### Installation
+
 
