@@ -131,20 +131,20 @@ sudo sed -i 's/default-sample-rate = 44100/default-sample-rate = 48000/g' /etc/p
 sudo sed -i 's/alternate-sample-rate = 48000/alternate-sample-rate = 44100/g' /etc/pulse/daemon.conf
 ~~~
 
-### PulseAudio Bluetooth Proprietary Modules (AptX, AptX HD, LDAC..)
+## Proprietary Bluetooth Codecs
 Adds AptX, AptX HD, LDAC and AAC support in Linux. Greatly improves sound quality.
 
 GitHub Repo Link - https://github.com/EHfive/pulseaudio-modules-bt
 
-#### Installation Instructions
+### Installation Instructions
 
-##### Arch
+#### Arch
 
 ~~~
 yay -S --noconfirm pulseaudio-modules-bt
 ~~~
 
-##### Debian
+#### Debian
 
 ~~~
 sudo add-apt-repository ppa:berglh/pulseaudio-a2dp
