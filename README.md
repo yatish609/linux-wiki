@@ -67,8 +67,7 @@ Under CPUs, you should customize the topology, i.e. with my 8 Cores (4 real core
   - To get the Disk recognized under the Windows 10 installer, use an additional DVD drive
     with the VirtIO ISO (https://docs.fedoraproject.org/en-US/quick-docs/creating-windows-virtual-machines-using-virtio-drivers/index.html)
     Then, in the Windows 10 installer-menu under the disks / media section, use "Load Drivers"; then the disk is recognized
-- Switch off "scale display" under "View" -> "Scale Display" -> Never
-- For a long time I thought that the blurry fonts in the VM were a result of the poor graphics performance but it was the VM trying to ajust the scaling.
+- Switch off "scale display" under "View" -> "Scale Display" -> Never (This is to prevent blurry fonts in the VM)
 
 
 ### SPICE Integration
@@ -220,7 +219,7 @@ Using the instructions below, we'll first pair your Bluetooth devices with Ubunt
 
         6. Make a note of which Bluetooth device MAC address matches which pairing key. The Mint/Ubuntu one won't need the spaces in-between.  Ignore the :00000.
 
-4. Go back to Linux (if not in Linux) and add our Windows key to our Linux config entries. Just note that the Bluetooth port's MAC address is formatted differently when moving from Windows to Linux - referenced as aa1122334455 in Windows in my example above. The Linux version will be in all caps and punctuated by ':' after every two characters - for example AA:11:22:33:44:55.  Based on your version of Linux, you can do one of these:
+4. Go back to Linux (if not in Linux) and add the Windows key to our Linux config entries. Note that the Bluetooth port's MAC address is formatted differently when moving from Windows to Linux - referenced as aa1122334455 in Windows as in the example above. The Linux version will be in all caps and punctuated by ':' after every two characters - for example AA:11:22:33:44:55.
 
     1. Switch to root: `sudo su`
 
