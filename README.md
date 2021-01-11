@@ -41,12 +41,6 @@ If it shows only LXC as connection, go to File > Add Connection and choose QEMU/
 
     (Members of the libvirt group have the ability to manage virtual machines)
 
-Useful links:  
-https://wiki.manjaro.org/index.php/Virt-manager  
-https://www.reddit.com/r/Fedora/comments/c0frj7/why_does_virtmanager_require_sudo_privileges/ (1st reply)  
-https://github.com/kubernetes/minikube/issues/828 (1st reply)  
-
-
 #### For Debian or debian-based distributions:
 
 1. Install virt-manager using:
@@ -54,6 +48,10 @@ https://github.com/kubernetes/minikube/issues/828 (1st reply)
     sudo apt install virt-manager bridge-utils
     ```
 
+Useful links:  
+https://wiki.manjaro.org/index.php/Virt-manager  
+https://www.reddit.com/r/Fedora/comments/c0frj7/why_does_virtmanager_require_sudo_privileges/ (1st reply)  
+https://github.com/kubernetes/minikube/issues/828 (1st reply)  
 
 ### Guest Config
 Under CPUs, you should customize the topology, i.e. with my 8 Cores (4 real cores + 4 HT), you should set:
