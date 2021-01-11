@@ -45,7 +45,7 @@ If it shows only LXC as connection, go to File > Add Connection and choose QEMU/
 
 1. Install virt-manager using:
     ```
-    sudo apt install virt-manager bridge-utils
+    sudo apt install qemu-kvm virt-manager bridge-utils
     ```
 
 Useful links:  
