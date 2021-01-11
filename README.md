@@ -15,6 +15,7 @@
 ## KVM
 
 ### Host Config
+------
 
 #### For Arch or Arch-based distributions:
 1. Install the following packages:
@@ -54,6 +55,8 @@ https://www.reddit.com/r/Fedora/comments/c0frj7/why_does_virtmanager_require_sud
 https://github.com/kubernetes/minikube/issues/828 (1st reply)  
 
 ### Guest Config
+------
+
 Under CPUs, you should customize the topology, i.e. with my 8 Cores (4 real cores + 4 HT), you should set:
   - Sockets: 1
   - Cores: 4
@@ -68,7 +71,7 @@ Under CPUs, you should customize the topology, i.e. with my 8 Cores (4 real core
 
 
 ### SPICE Integration
-
+------
 #### For Linux Guests:
 
 1. To enable copy paste from host to guest, make sure to install `spice-vdagent`.
@@ -85,6 +88,8 @@ https://askubuntu.com/questions/858649/how-can-i-copypaste-from-the-host-to-a-kv
 
 
 ### GPU Passthrough
+------
+
 1. Get GPU ids from "sudo lspci -nn" (will be around 2). Save these ids somewhere.
 2. Install the following packages:
     ```
