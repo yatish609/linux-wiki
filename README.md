@@ -255,7 +255,7 @@ The following table shows VAAPI support for various browsers:
 
 
 To use VAAPI in Chromium-based browsers:
-    1. Install required packages:
+   1. Install required packages:
         * Arch
             ```
             sudo pacman -S intel-gpu-driver libva-intel-driver libva-utils
@@ -263,22 +263,22 @@ To use VAAPI in Chromium-based browsers:
         * Ubuntu Based
            Already pre-installed
 
-    2. Visit `chrome://flags` and enable `#ignore-gpu-blocklist`, `#enable-accelerated-video-decode` and `#enable-gpu-rasterization`.
+   2. Visit `chrome://flags` and enable `#ignore-gpu-blocklist`, `#enable-accelerated-video-decode` and `#enable-gpu-rasterization`.
 
-    3. Create `~/.config/chromium-flags.conf` or `~/.config/brave-flags.conf` as per browser. Depending upon the display server in use, for Xorg, add `--use-gl=desktop` to the file, for Wayland, add `--use-gl=egl` to the file.
+   3. Create `~/.config/chromium-flags.conf` or `~/.config/brave-flags.conf` as per browser. Depending upon the display server in use, for Xorg, add `--use-gl=desktop` to the file, for Wayland, add `--use-gl=egl` to the file.
 
-    4. Restart the browser and voila!
+   4. Restart the browser and voila!
 
-    5. To verify if VAAPI is successfully running, install `intel-gpu-tools` and run `sudo intel_gpu_top` and check if video decode is being used. (Note: Video decode can also be used for DE such as Cinnamon or KDE, so make sure to check this while running video in foreground with tab in focus.)
+   5. To verify if VAAPI is successfully running, install `intel-gpu-tools` and run `sudo intel_gpu_top` and check if video decode is being used. (Note: Video decode can also be used for DE such as Cinnamon or KDE, so make sure to check this while running video in foreground with tab in focus.)
 
 To use VAAPI in Firefox:
-    1. Go to `about:config` and make sure the following flags are set to respective boolean values:
+   1. Go to `about:config` and make sure the following flags are set to respective boolean values:
                 |    Flags    | Boolean Value |
                 | :-----------: | :-----------: |
                 | media.ffmpeg.dmabuf-textures.enabled | True |
                 | media.ffmpeg.vaapi.enabled | True |
                 | media.ffvpx.enabled | False |
-    2. Run Firefox with `MOZ_X11_EGL=1` like `MOZ_X11_EGL=1 firefox` or `MOZ_X11_EGL=1 /usr/lib/firefox/firefox`
+   2. Run Firefox with `MOZ_X11_EGL=1` like `MOZ_X11_EGL=1 firefox` or `MOZ_X11_EGL=1 /usr/lib/firefox/firefox`
 
  
 ## ZSH
