@@ -192,27 +192,27 @@ Using the instructions below, we'll first pair your Bluetooth devices with Ubunt
 
         5. Run these commands in that console:
 
-~~~
+            ```
 
-> cd CurrentControlSet\Services\BTHPORT\Parameters\Keys
-> # if there is no CurrentControlSet, then try ControlSet001
-> # on Windows 7, "services" above is lowercased.
-> ls
-# shows you your Bluetooth port's MAC address
-Node has 1 subkeys and 0 values
-  key name
-  <aa1122334455>
-> cd aa1122334455  # cd into the folder
-> ls  
-# lists the existing devices' MAC addresses
-Node has 0 subkeys and 1 values
-  size     type            value name             [value if type DWORD]
-    16  REG_BINARY        <001f20eb4c9a>
-> hex 001f20eb4c9a
-=> :00000 XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ...ignore..chars..
-# ^ the XXs are the pairing key
+            > cd CurrentControlSet\Services\BTHPORT\Parameters\Keys
+            > # if there is no CurrentControlSet, then try ControlSet001
+            > # on Windows 7, "services" above is lowercased.
+            > ls
+            # shows you your Bluetooth port's MAC address
+            Node has 1 subkeys and 0 values
+              key name
+              <aa1122334455>
+            > cd aa1122334455  # cd into the folder
+            > ls  
+            # lists the existing devices' MAC addresses
+            Node has 0 subkeys and 1 values
+              size     type            value name             [value if type DWORD]
+                16  REG_BINARY        <001f20eb4c9a>
+            > hex 001f20eb4c9a
+            => :00000 XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX ...ignore..chars..
+            # ^ the XXs are the pairing key
 
-~~~
+            ```
 
         6. Make a note of which Bluetooth device MAC address matches which pairing key. The Mint/Ubuntu one won't need the spaces in-between.  Ignore the :00000.
 
