@@ -104,7 +104,7 @@ https://github.com/kubernetes/minikube/issues/828 (1st reply)
 ##### For Debian or debian-based distributions:
 
 1. Install virt-manager using:
-    '''
+    '''sh
     sudo apt install virt-manager bridge-utils
     '''
 
