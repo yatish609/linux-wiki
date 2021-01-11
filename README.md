@@ -12,6 +12,7 @@
 3. [Bluetooth Pairing for Dual Boot](#bluetooth-pairing-for-dual-boot)
 4. [VAAPI](#vaapi)
 5. [ZSH](#zsh)
+    * [Oh-my-zsh](#oh-my-zsh)
 
 ## KVM
 
@@ -253,8 +254,62 @@ The following table shows VAAPI support for various browsers:
 | Firefox | :heavy_check_mark: |
 
 
+To use VAAPI in Chromium-based browsers:
+    1. Install required packages:
+        * Arch
+            ```
+            sudo pacman -S intel-gpu-driver libva-intel-driver libva-utils
+            ```
+        * Ubuntu Based
+           Already pre-installed
 
+    2. Visit `chrome://flags` and enable `#ignore-gpu-blocklist`, `#enable-accelerated-video-decode` and `#enable-gpu-rasterization`.
 
+    3. Create `~/.config/chromium-flags.conf` or `~/.config/brave-flags.conf` as per browser. Depending upon the display server in use, for Xorg, add `--use-gl=desktop` to the file, for Wayland, add `--use-gl=egl` to the file.
+
+    4. Restart the browser and voila!
+
+    5. To verify if VAAPI is successfully running, install `intel-gpu-tools` and run `sudo intel_gpu_top` and check if video decode is being used. (Note: Video decode can also be used for DE such as Cinnamon or KDE, so make sure to check this while running video in foreground with tab in focus.)
+
+To use VAAPI in Firefox:
+    1. Go to `about:config` and make sure the following flags are set to respective boolean values:
+                |    Flags    | Boolean Value |
+                | :-----------: | :-----------: |
+                | media.ffmpeg.dmabuf-textures.enabled | True |
+                | media.ffmpeg.vaapi.enabled | True |
+                | media.ffvpx.enabled | False |
+    2. Run Firefox with `MOZ_X11_EGL=1` like `MOZ_X11_EGL=1 firefox` or `MOZ_X11_EGL=1 /usr/lib/firefox/firefox`
+
+ 
 ## ZSH
 
 ### Installation
+
+* For Debian/Ubuntu based distributions: 
+    ```
+    sudo apt install zsh
+    ```
+* For Arch based distributions:
+    ```
+    sudo pacman -S zsh
+    ```
+
+### Oh-my-zsh
+Oh-my-zsh is an improvement over default zsh which makes it easy and convinient to add, manage and update plugins along with theming and other stuff.
+
+To install oh-my-zsh, you need to have zsh already installed.
+
+1. Install oh-my-zsh: 
+    ```
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    ```
+2. For autosuggestions and syntax highlighting, clone the plugins into oh-my-zsh's plugins directory:
+    ```
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    ```
+3. Activate the plugin by adding it in `~/.zshrc`:
+    ```
+    plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+    ```
+4. Restart the terminal.
