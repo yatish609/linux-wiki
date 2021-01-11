@@ -242,10 +242,14 @@ Using the instructions below, we'll first pair your Bluetooth devices with Ubunt
 
 ## VAAPI
 
-|    Browser    | VAAPI Support |
+The following table shows VAAPI support for various browsers:
+
+|    Browser    | Supported |
 | :-----------: | :-----------: |
 | Google Chrome | :x:  |
 | Chromium  | :heavy_check_mark:  |
+| Brave | :heavy_check_mark: |
+| Firefox | :heavy_check_mark: |
 
 
 
