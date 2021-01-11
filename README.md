@@ -246,7 +246,8 @@ The following table shows VAAPI support for various browsers:
 
 |    Browser    | Supported |
 | :-----------: | :-----------: |
-| Google Chrome | :x:  |
+| Google Chrome | :x: |
+| Microsoft Edge | :x: |
 | Chromium  | :heavy_check_mark:  |
 | Brave | :heavy_check_mark: |
 | Firefox | :heavy_check_mark: |
