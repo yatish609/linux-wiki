@@ -256,13 +256,14 @@ The following table shows VAAPI support for various browsers:
 | Firefox | :heavy_check_mark: |
 
 
-### Chromium-based browsers:
+### Chromium-based browsers
+------
    1. Install required packages:
         * Arch
             ```
             sudo pacman -S intel-gpu-driver libva-intel-driver libva-utils
             ```
-        * Linux Mint/PopOS - Pre-installed
+        * Linux Mint/Pop!_OS - Pre-installed
 
    2. Visit `chrome://flags` and enable `#ignore-gpu-blocklist`, `#enable-accelerated-video-decode` and `#enable-gpu-rasterization`.
 
@@ -272,7 +273,8 @@ The following table shows VAAPI support for various browsers:
 
    5. To verify if VAAPI is successfully running, install `intel-gpu-tools` and run `sudo intel_gpu_top` and check if video decode is being used. (Note: Video decode can also be used for DE such as Cinnamon or KDE, so make sure to check this while running video in foreground with tab in focus.)
 
-### Firefox:
+### Firefox
+------
    1. Go to `about:config` and make sure the following flags are set to respective boolean values:
 
        |    Flags    | Boolean Value |
