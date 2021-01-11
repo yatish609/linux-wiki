@@ -224,16 +224,13 @@ Using the instructions below, we'll first pair your Bluetooth devices with Ubunt
 
     3. Here you'll find folders for each device you've paired with. The folder names being the Bluetooth devices' MAC addresses and contain a single file `info`. In these files, you'll see the link key you need to replace with your Windows ones, like so:
 
-~~~
-[LinkKey]
-Key=B99999999FFFFFFFFF999999999FFFFF
-~~~
+        ```
+            [LinkKey]
+            Key=B99999999FFFFFFFFF999999999FFFFF
+        ```
 
 5. Once updated, restart your Bluetooth service in one of the following ways, and then it works!
-    * Either restart bluetooth
-~~~
-sudo systemctl restart Bluetooth 
-~~~
+    * Either restart bluetooth: `sudo systemctl restart Bluetooth`
     * Alternatively, reboot your machine into Linux.
 
 6. Reboot into Windows - it works!
