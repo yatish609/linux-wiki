@@ -5,7 +5,7 @@
     * [Host config](#host-config)
     * [Guest config](#guest-config)
     * [SPICE Integration](#spice-integration)
-    * [GPU Passthrough Guide](#gpu-passthrough-guide)
+    * [GPU Passthrough](#gpu-passthrough)
 2. [Sound Improvements](#sound-improvements)
 3. [VAAPI](#vaapi)
 4. [Proprietary Bluetooth Codecs](#proprietary-bluetooth-codecs)
@@ -52,9 +52,9 @@ https://github.com/kubernetes/minikube/issues/828 (1st reply)
 ##### For Debian or debian-based distributions:
 
 1. Install virt-manager using:
-~~~sh
-sudo apt install virt-manager bridge-utils
-~~~
+    ```
+    sudo apt install virt-manager bridge-utils
+    ```
 
 
 ### Guest Config
@@ -71,7 +71,7 @@ Under CPUs, you should customize the topology, i.e. with my 8 Cores (4 real core
 - For a long time I thought that the blurry fonts in the VM were a result of the poor graphics performance but it was the VM trying to ajust the scaling.
 
 
-### SPICE integration
+### SPICE Integration
 
 #### For Linux Guests:
 
@@ -88,7 +88,7 @@ https://www.spice-space.org/download.html
 https://askubuntu.com/questions/858649/how-can-i-copypaste-from-the-host-to-a-kvm-guest  
 
 
-### GPU Passthrough Guide
+### GPU Passthrough
 1. Get GPU ids from "sudo lspci -nn" (will be around 2). Save these ids somewhere.
 2. Install the following packages:
     ```
