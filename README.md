@@ -7,10 +7,11 @@
     * [SPICE Integration](#spice-integration)
     * [GPU Passthrough](#gpu-passthrough)
 2. [Sound Improvements](#sound-improvements)
-3. [VAAPI](#vaapi)
-4. [Proprietary Bluetooth Codecs](#proprietary-bluetooth-codecs)
+    * [Pulseaudio Improvements](#pulseaudio-improvements)
+    * [Proprietary Bluetooth Codecs](#proprietary-bluetooth-codecs)
+3. [Bluetooth Pairing for Dual Boot](#bluetooth-pairing-for-dual-boot)
+4. [VAAPI](#vaapi)
 5. [ZSH](#zsh)
-6. [Bluetooth Pairing for Dual Boot](#bluetooth-pairing-for-dual-boot)
 
 ## KVM
 
@@ -122,6 +123,7 @@ https://askubuntu.com/questions/858649/how-can-i-copypaste-from-the-host-to-a-kv
 
 ## Sound Improvements
 ### PulseAudio Improvements
+------
 
 Default linux config provides average sound experience. To improve sound quality on linux, certain pulseaudio parameters can be changed. 
 
@@ -143,30 +145,23 @@ The following commands automatically apply the above recommended values to the p
     ~~~
 
 
-## Proprietary Bluetooth Codecs
+### Proprietary Bluetooth Codecs
+------
 Adds AptX, AptX HD, LDAC and AAC support in Linux. Greatly improves sound quality.
 
 GitHub Repo Link - https://github.com/EHfive/pulseaudio-modules-bt
 
-### Arch
-
+#### Arch
     ~~~
     yay -S --noconfirm pulseaudio-modules-bt
     ~~~
 
-### Debian
-
+#### Debian
     ~~~
     sudo add-apt-repository ppa:berglh/pulseaudio-a2dp
     sudo apt update
     sudo apt install pulseaudio-modules-bt libldac
     ~~~
-
-
-## ZSH
-
-### Installation
-
 
 
 ## Bluetooth Pairing for Dual Boot
@@ -243,3 +238,13 @@ Using the instructions below, we'll first pair your Bluetooth devices with Ubunt
     * Alternatively, reboot your machine into Linux.
 
 6. Reboot into Windows - it works!
+
+
+
+## ZSH
+
+### Installation
+
+
+## VAAPI
+
