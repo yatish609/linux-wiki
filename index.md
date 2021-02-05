@@ -125,9 +125,9 @@ https://askubuntu.com/questions/858649/how-can-i-copypaste-from-the-host-to-a-kv
     https://www.youtube.com/watch?v=tDMoEvf8Q18&t=523s (Detailed video guide)
 
 
-
-
-
+<br>
+<br>
+<br>
 ## Sound Improvements
 ### PulseAudio Improvements
 ------
@@ -170,9 +170,9 @@ GitHub Repo Link - https://github.com/EHfive/pulseaudio-modules-bt
     sudo apt install pulseaudio-modules-bt libldac
     ~~~
 
-
-
-
+<br>
+<br>
+<br>
 ## Bluetooth Pairing for Dual Boot
 
 Sourced from: [link](https://unix.stackexchange.com/questions/255509/bluetooth-pairing-on-dual-boot-of-windows-linux-mint-ubuntu-stop-having-to-p)
@@ -251,7 +251,9 @@ Using the instructions below, we'll first pair your Bluetooth devices with Ubunt
 6. Reboot into Windows - it works!
 
 
-
+<br>
+<br>
+<br>
 ## VAAPI
 
 The following table shows VAAPI support for various browsers:
@@ -294,7 +296,10 @@ The following table shows VAAPI support for various browsers:
 
    2. Run Firefox with `MOZ_X11_EGL=1` like `MOZ_X11_EGL=1 firefox` or `MOZ_X11_EGL=1 /usr/lib/firefox/firefox`
 
- 
+
+<br>
+<br>
+<br> 
 ## ZSH
 
 ### Installation
