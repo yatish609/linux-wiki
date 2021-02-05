@@ -14,6 +14,11 @@
 5. [ZSH](#zsh)
     * [Oh-my-zsh](#oh-my-zsh)
 
+
+
+
+
+
 ## KVM
 
 ### Host Config
@@ -121,6 +126,9 @@ https://askubuntu.com/questions/858649/how-can-i-copypaste-from-the-host-to-a-kv
     https://www.youtube.com/watch?v=tDMoEvf8Q18&t=523s (Detailed video guide)
 
 
+
+
+
 ## Sound Improvements
 ### PulseAudio Improvements
 ------
@@ -164,13 +172,12 @@ GitHub Repo Link - https://github.com/EHfive/pulseaudio-modules-bt
     ~~~
 
 
+
+
 ## Bluetooth Pairing for Dual Boot
 
 Sourced from: [link](https://unix.stackexchange.com/questions/255509/bluetooth-pairing-on-dual-boot-of-windows-linux-mint-ubuntu-stop-having-to-p)
 
-<details>
-<summary>Click here to expand instructions</summary>
-<br>
 Basically, when you pair your device, your Bluetooth service generates a unique set of pairing keys. First, your computer stores the Bluetooth device's MAC address and pairing key. Second, your Bluetooth device stores your computer's MAC address and the matching key. This usually works fine, but the MAC address for your Bluetooth port will be the same on both Linux and Windows (it is set on the hardware level). Thus, when you re-pair the device in Windows or Linux and it generates a new key, that key overwrites the previously stored key on the Bluetooth device. Windows overwrites the Linux key and vice versa.
 
 ### How to fix
@@ -243,8 +250,6 @@ Using the instructions below, we'll first pair your Bluetooth devices with Ubunt
     * Alternatively, reboot your machine into Linux.
 
 6. Reboot into Windows - it works!
-</details>
-
 
 
 
